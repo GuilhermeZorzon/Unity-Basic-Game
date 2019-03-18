@@ -12,6 +12,7 @@ public class Collision_script : MonoBehaviour {
 
 		if (collisioninfo.gameObject.CompareTag("Obstacle")){
 			movement.enabled = false;
+			FindObjectOfType<GameManager>().EndGame();
 		}
 
 	}
