@@ -1,2 +1,4 @@
 # Unity-Basic-Game
-A Basic Game to start using unity. The first game of my life :)
+A Basic Game to start using Unity. The first game of my life :)
+
+This game was developed based on Brackeys tutorial series on YouTube. Go there and check it out!
