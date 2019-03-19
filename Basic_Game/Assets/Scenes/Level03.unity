@@ -2041,7 +2041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa49a3a805944b4889d6c31286a687b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completeUI: {fileID: 0}
+  completeUI: {fileID: 852527034}
   RstDelay: 1
 --- !u!1001 &1959729104
 Prefab:
