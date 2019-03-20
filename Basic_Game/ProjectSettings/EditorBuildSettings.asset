@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits_Menu.unity
     guid: 558380f956886244384bb27391af70a1
+  - enabled: 1
+    path: Assets/Scenes/LevelLost_Menu.unity
+    guid: a79db2cd851592c4daf625c13538b6dd
   m_configObjects: {}

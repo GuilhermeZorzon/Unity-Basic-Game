@@ -19,4 +19,9 @@ public class Credits_script : MonoBehaviour {
 		SceneManager.LoadScene(0);
 	}
 
+	public void RestartLevel () {
+		string sceneName = PlayerPrefs.GetString("lastLoadedScene");
+        SceneManager.LoadScene(sceneName);
+	}
+
 }

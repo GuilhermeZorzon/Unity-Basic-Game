@@ -15,15 +15,15 @@ public class GameManager : MonoBehaviour {
 		if(GameHasEnded == false){
 
 			GameHasEnded = true;
-			Debug.Log("Game over!");
-			Invoke("Restart", RstDelay);
+			SceneManager.LoadScene("LevelLost_Menu");
+			// Invoke("Restart", RstDelay);
 
 		}
 	}
 
-	void Restart () {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-	}
+	/*void Restart (float currentScene) {
+		SceneManager.LoadScene("Level01");
+	}*/
 
 	public void CompleteLevel () {
 		completeUI.SetActive(true);
