@@ -16,17 +16,18 @@ public class GameManager : MonoBehaviour {
 
 			GameHasEnded = true;
 			SceneManager.LoadScene("LevelLost_Menu");
-			// Invoke("Restart", RstDelay);
 
 		}
 	}
 
-	/*void Restart (float currentScene) {
-		SceneManager.LoadScene("Level01");
-	}*/
-
 	public void CompleteLevel () {
-		completeUI.SetActive(true);
+		int sceneIndex = PlayerPrefs.GetInt("nextLoadedScene");
+		if (sceneIndex != 3) {
+			SceneManager.LoadScene("LevelWon_Menu");
+		}
+		else {
+			SceneManager.LoadScene("Credits_Menu");
+		}
 	}
 
 }

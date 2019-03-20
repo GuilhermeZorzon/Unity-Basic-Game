@@ -24,4 +24,9 @@ public class Credits_script : MonoBehaviour {
         SceneManager.LoadScene(sceneName);
 	}
 
+	public void NextLevel () {
+		int sceneIndex = PlayerPrefs.GetInt("nextLoadedScene");
+		SceneManager.LoadScene(sceneIndex + 1);
+	}
+
 }
