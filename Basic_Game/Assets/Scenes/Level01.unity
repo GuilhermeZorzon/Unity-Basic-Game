@@ -824,6 +824,7 @@ Prefab:
       propertyPath: completeUI
       value: 
       objectReference: {fileID: 1985356757}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114714151128762524, guid: 3bcadc080ad5cac42bdb1185dab78942, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3bcadc080ad5cac42bdb1185dab78942, type: 2}
   m_IsPrefabParent: 0
