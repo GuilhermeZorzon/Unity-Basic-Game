@@ -489,6 +489,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e73834559c4566489272f5e96e2067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &278527700 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 54960006727489516, guid: 3bcadc080ad5cac42bdb1185dab78942,
+    type: 2}
+  m_PrefabInternal: {fileID: 2086100951}
 --- !u!114 &283598956 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114999503230259852, guid: 405644e0715cfad4eb1deb30b63f155f,
@@ -1569,6 +1574,11 @@ Prefab:
       propertyPath: score
       value: 
       objectReference: {fileID: 283598956}
+    - target: {fileID: 114854510586597238, guid: 3bcadc080ad5cac42bdb1185dab78942,
+        type: 2}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 278527700}
     m_RemovedComponents:
     - {fileID: 114714151128762524, guid: 3bcadc080ad5cac42bdb1185dab78942, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3bcadc080ad5cac42bdb1185dab78942, type: 2}
