@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 
 			GameHasEnded = true;
 			SceneManager.LoadScene("LevelLost_Menu");
+			PlayerPrefs.SetString ("Score", "0");
 
 		}
 	}

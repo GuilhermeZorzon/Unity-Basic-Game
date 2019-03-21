@@ -14,6 +14,7 @@ public class Coin_Collector : MonoBehaviour {
 			scr += 1;
 			score.text = (scr).ToString();
 			collisioninfo.gameObject.SetActive(false);
+			PlayerPrefs.SetString ("Score", score.text);
 		}
 	}
 }
