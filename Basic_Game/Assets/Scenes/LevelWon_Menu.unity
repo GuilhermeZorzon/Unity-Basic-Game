@@ -319,7 +319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f45dc2f1238d7740a84970595573dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scr: {fileID: 114999503230259852, guid: 405644e0715cfad4eb1deb30b63f155f, type: 2}
   score: {fileID: 444694966}
 --- !u!114 &381076177
 MonoBehaviour:
@@ -477,7 +476,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 7
+  m_Text: 0
 --- !u!222 &444694967
 CanvasRenderer:
   m_ObjectHideFlags: 0
