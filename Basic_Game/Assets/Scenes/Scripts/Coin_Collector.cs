@@ -7,10 +7,13 @@ public class Coin_Collector : MonoBehaviour {
 	
 	public Transform player;
 	public Text score;
+	private int scr = 0;
 
-	// Update is called once per frame
-	void Update () {
-		if(player.position.z >= 25.5)
-		score.text = (player.position.z - 25).ToString("0");
+	void OnTriggerEnter (Collider collisioninfo) {
+		if (collisioninfo.gameObject.CompareTag("Coin")){
+			scr += 1;
+			score.text = (scr).ToString();
+			collisioninfo.gameObject.SetActive(false);
+		}
 	}
 }
