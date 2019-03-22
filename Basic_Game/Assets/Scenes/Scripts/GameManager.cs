@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
 			SceneManager.LoadScene("LevelWon_Menu");
 		}
 		else {
-			SceneManager.LoadScene("Credits_Menu");
+			SceneManager.LoadScene("LevelWon2_Menu");
 		}
 	}
 
