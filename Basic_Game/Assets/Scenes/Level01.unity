@@ -1034,7 +1034,7 @@ Prefab:
     - target: {fileID: 114387578670033312, guid: 3bcadc080ad5cac42bdb1185dab78942,
         type: 2}
       propertyPath: forwardForce
-      value: 2000
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 114400742260830932, guid: 3bcadc080ad5cac42bdb1185dab78942,
         type: 2}
