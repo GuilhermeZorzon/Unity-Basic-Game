@@ -4,13 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Coin_Collector : MonoBehaviour {
-
-	void Start()
-    {
-        //Output the current screen window width in the console
-        Debug.Log("Screen Width : " + Screen.width);
-		Debug.Log("Screen Height : " + Screen.height);
-    }
 	
 	public Transform player;
 	public Text score;
