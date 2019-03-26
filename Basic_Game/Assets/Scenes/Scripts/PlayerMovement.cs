@@ -8,7 +8,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float forwardForce;
 
-	public float sidewayForce;
+	private float sidewayForce = 0;
+
+	private float jumpForce = -10;  
+    private bool isGrounded; 
+	private bool controllLocked = false;
 
 	void Start () {
 		
@@ -16,21 +20,54 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame. FixedUpdate is because of Physics
 	void FixedUpdate () {
+
+		rb.velocity = new Vector3 (sidewayForce, jumpForce, forwardForce);
+
+		if( Input.GetKey("d") && controllLocked == false){
+
+			sidewayForce = +5;
+			controllLocked = true;
+			StartCoroutine (stopSlide());
+		}
+
+		if( Input.GetKey("a") && controllLocked == false){
+
+			sidewayForce = -5;
+			controllLocked = true;
+			StartCoroutine (stopSlide());
+		}
+
 		
-		rb.AddForce(0, 0, forwardForce * Time.deltaTime, ForceMode.VelocityChange);
-
-		if( Input.GetKey("d") ){
-
-			rb.AddForce(sidewayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-		}
-
-		else if ( Input.GetKey("a") ){
-			
-			rb.AddForce(-sidewayForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-		}
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
+            jumpForce = +10;
+			StartCoroutine (stopJump());
+        }
 
 		if(rb.position.y < -1f){
 			FindObjectOfType<GameManager>().EndGame();
 		}
+
+
 	}
+
+	IEnumerator stopSlide () {
+		yield return new WaitForSeconds (0.4f);
+		sidewayForce = 0;
+		controllLocked = false;
+	}
+
+	IEnumerator stopJump () {
+		yield return new WaitForSeconds (0.2f);
+		jumpForce = -10;
+	}
+     
+    void OnCollisionEnter(Collision collisioninfo) {
+		if(collisioninfo.gameObject.CompareTag("Ground")){
+			isGrounded = true;
+		}
+    }
+    void OnCollisionExit() {
+        isGrounded = false; 
+    } 
+
 }

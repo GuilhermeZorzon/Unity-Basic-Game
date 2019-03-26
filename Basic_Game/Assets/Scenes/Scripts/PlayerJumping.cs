@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerJumping : MonoBehaviour {
 
-	public Rigidbody rb;
+	/*public Rigidbody rb;
 	public float jumpforce;  
     private bool isgrounded; 
          
@@ -23,5 +23,5 @@ public class PlayerJumping : MonoBehaviour {
     void OnCollisionExit() {
         isgrounded = false;
     } 
-
+*/
 }
