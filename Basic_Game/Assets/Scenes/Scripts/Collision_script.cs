@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collision_script : MonoBehaviour {
 
 	public PlayerMovement movement;
-	public Transform exp;
+	public Transform explosion;
 
 	// Used when collision occurs
 
@@ -14,7 +14,7 @@ public class Collision_script : MonoBehaviour {
 		if (collisioninfo.gameObject.CompareTag("Obstacle")){
 			movement.enabled = false;
 			gameObject.SetActive(false);
-			Instantiate (exp, transform.position, exp.rotation);
+			Instantiate (explosion, transform.position, explosion.rotation);
 			Invoke ("Find", 0.5f);
 		}
 

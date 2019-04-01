@@ -9,14 +9,10 @@ public class PlayerMovement : MonoBehaviour {
 	public float forwardForce;
 
 	private float sidewayForce = 0;
-
 	private float jumpForce = -10;  
     private bool isGrounded; 
 	private bool controllLocked = false;
 
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame. FixedUpdate is because of Physics
 	void FixedUpdate () {
@@ -25,21 +21,21 @@ public class PlayerMovement : MonoBehaviour {
 
 		if( Input.GetKey("d") && controllLocked == false){
 
-			sidewayForce = +5;
+			sidewayForce = 3f;
 			controllLocked = true;
 			StartCoroutine (stopSlide());
 		}
 
 		if( Input.GetKey("a") && controllLocked == false){
 
-			sidewayForce = -5;
+			sidewayForce = -3f;
 			controllLocked = true;
 			StartCoroutine (stopSlide());
 		}
 
 		
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
-            jumpForce = +10;
+            jumpForce = +5;
 			StartCoroutine (stopJump());
         }
 
@@ -51,14 +47,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	IEnumerator stopSlide () {
-		yield return new WaitForSeconds (0.4f);
+		yield return new WaitForSeconds (0.5f);
 		sidewayForce = 0;
 		controllLocked = false;
 	}
 
 	IEnumerator stopJump () {
-		yield return new WaitForSeconds (0.2f);
-		jumpForce = -10;
+		yield return new WaitForSeconds (0.4f);
+		jumpForce = -4f;
 	}
      
     void OnCollisionEnter(Collision collisioninfo) {

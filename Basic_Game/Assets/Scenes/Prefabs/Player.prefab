@@ -28,6 +28,8 @@ GameObject:
   - component: {fileID: 114678381904744486}
   - component: {fileID: 114714151128762524}
   - component: {fileID: 114400742260830932}
+  - component: {fileID: 114355859124513018}
+  - component: {fileID: 114833844586094018}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -117,6 +119,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114355859124513018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991074552577282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19a49a1086811345b17c37e2297f47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grd: {fileID: 0}
+  ply: {fileID: 1991074552577282}
+  plyTransform: {fileID: 4524863483392102}
 --- !u!114 &114379247789676534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 114387578670033312}
+  explosion: {fileID: 4477969024491316, guid: bcf2b579278012741a3d03b9bdd0e10a, type: 2}
 --- !u!114 &114387578670033312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54960006727489516}
-  forwardForce: 35
+  forwardForce: 15
 --- !u!114 &114400742260830932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,8 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa49a3a805944b4889d6c31286a687b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completeUI: {fileID: 0}
-  RstDelay: 1
 --- !u!114 &114714151128762524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,3 +194,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e73834559c4566489272f5e96e2067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114833844586094018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991074552577282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436626a0dd78aa1408922ad7f90b6302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 4589379062598192, guid: 808ce297d8de6fd43882f07808181d85, type: 2}
+  obstacle1Lane: {fileID: 4433065784934108, guid: ab83c19e91f51dd4e8410db91a06c114,
+    type: 2}
+  pit: {fileID: 4666015002091938, guid: 82bf7d8d2fdb0954cb6927a8294cd388, type: 2}
+  unjumpable: {fileID: 4816309790702396, guid: c98e8c98b16ce984da618f047c896f3d, type: 2}
