@@ -56,15 +56,14 @@ public class PlayerMovement : MonoBehaviour {
 	IEnumerator stopJump () {
 		yield return new WaitForSeconds (0.4f);
 		jumpForce = -4f;
-		isGrounded = true;
 	}
      
-    /*void OnCollisionEnter(Collision collisioninfo) {
+    void OnCollisionEnter(Collision collisioninfo) {
 		if(collisioninfo.gameObject.CompareTag("Ground")){
 			isGrounded = true;
 		}
     }
-    void OnCollisionExit() {
+    /*void OnCollisionExit() {
         isGrounded = false; 
 } */
 
