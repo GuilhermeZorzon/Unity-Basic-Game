@@ -41,10 +41,10 @@ public class Obstacle_Loop : MonoBehaviour {
 	void Obs () {
 
 		for (int i = 0; i < 9; i++){
-			gObjDef = Random.Range(0,3);
+			gObjDef = Random.Range(0,4);
 			//gObj2Def = Random.Range(0,3);
 			//numObj = Random.Range(1,2);
-			lane = Random.Range(-1,1);
+			lane = Random.Range(-1,2);
 
 			if (gObjDef == 0) {
 				gObj = obstacle;
