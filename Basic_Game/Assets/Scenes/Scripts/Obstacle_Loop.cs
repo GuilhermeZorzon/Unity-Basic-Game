@@ -8,6 +8,8 @@ public class Obstacle_Loop : MonoBehaviour {
 	public Transform obstacle1Lane;
 	public Transform pit;
 	public Transform unjumpable;
+	public Transform slideUnder;
+	public Transform slideUnder2Lane;
 
 	private int frameInterval = 220;
 	private float zInterval = 0f;
@@ -41,10 +43,14 @@ public class Obstacle_Loop : MonoBehaviour {
 	void Obs () {
 
 		for (int i = 0; i < 9; i++){
-			gObjDef = Random.Range(0,4);
+			gObjDef = Random.Range(0,6);
 			//gObj2Def = Random.Range(0,3);
 			//numObj = Random.Range(1,2);
 			lane = Random.Range(-1,2);
+
+			PlayerPrefs.SetInt("coinTeller", gObjDef);
+			PlayerPrefs.SetInt("coinPlace", lane);
+
 
 			if (gObjDef == 0) {
 				gObj = obstacle;
@@ -55,8 +61,14 @@ public class Obstacle_Loop : MonoBehaviour {
 			else if (gObjDef == 2) {
 				gObj = pit;
 			}
-			else {
+			else if (gObjDef == 3) {
 				gObj = unjumpable;
+			}
+			else if (gObjDef == 4) {
+				gObj = slideUnder;
+			}
+			else if (gObjDef == 5) {
+				gObj = slideUnder2Lane;
 			}
 
 
@@ -85,8 +97,11 @@ public class Obstacle_Loop : MonoBehaviour {
 
 			}*/
 
+			PlayerPrefs.SetFloat("zPlace", zFirst + zInterval);
+
 			zInterval = zInterval + 10f;
-			Debug.Log("zInterval: " + zInterval);
+			
+			FindObjectOfType<Coin_Loop>().Coin();
 		}
 		zInterval = 0f;
 		zFirst = zFirst + 100f;

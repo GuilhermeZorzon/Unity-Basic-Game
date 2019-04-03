@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 114400742260830932}
   - component: {fileID: 114355859124513018}
   - component: {fileID: 114833844586094018}
+  - component: {fileID: 114780539561951918}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -158,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54960006727489516}
+  plyTransform: {fileID: 0}
   forwardForce: 15
 --- !u!114 &114400742260830932
 MonoBehaviour:
@@ -194,6 +196,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e73834559c4566489272f5e96e2067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114780539561951918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991074552577282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b6cf6979c50894bad1cf83861fd59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin1: {fileID: 4653792082134398, guid: 8c120015ec92be44d85ff39443b5c139, type: 2}
+  coinStraight: {fileID: 4024545443427926, guid: f45f25108cf8fe14c96584f18639683a,
+    type: 2}
+  coinJump: {fileID: 0}
 --- !u!114 &114833844586094018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,3 +227,5 @@ MonoBehaviour:
     type: 2}
   pit: {fileID: 4666015002091938, guid: 82bf7d8d2fdb0954cb6927a8294cd388, type: 2}
   unjumpable: {fileID: 4816309790702396, guid: c98e8c98b16ce984da618f047c896f3d, type: 2}
+  slideUnder: {fileID: 0}
+  slideUnder2Lane: {fileID: 0}
