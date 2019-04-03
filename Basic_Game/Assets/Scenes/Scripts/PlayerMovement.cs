@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 	public Rigidbody rb;
+	public Transform plyTransform;
 
 	public float forwardForce;
 
@@ -44,6 +45,14 @@ public class PlayerMovement : MonoBehaviour {
 			FindObjectOfType<GameManager>().EndGame();
 		}
 
+		if(Input.GetKey(KeyCode.LeftShift)) {
+			plyTransform.localScale = new Vector3(1F, 0.5F, 1F);
+        }
+
+		if (Input.GetKeyUp(KeyCode.LeftShift)) {
+            plyTransform.localScale = new Vector3(1F, 1F, 1F);
+        }
+
 
 	}
 
@@ -63,8 +72,5 @@ public class PlayerMovement : MonoBehaviour {
 			isGrounded = true;
 		}
     }
-    /*void OnCollisionExit() {
-        isGrounded = false; 
-} */
-
+  
 }
