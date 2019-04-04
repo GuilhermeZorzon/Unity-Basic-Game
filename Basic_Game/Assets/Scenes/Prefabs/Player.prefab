@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54960006727489516}
-  plyTransform: {fileID: 0}
+  plyTransform: {fileID: 4524863483392102}
   forwardForce: 15
 --- !u!114 &114400742260830932
 MonoBehaviour:
@@ -208,9 +208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin1: {fileID: 4653792082134398, guid: 8c120015ec92be44d85ff39443b5c139, type: 2}
-  coinStraight: {fileID: 4024545443427926, guid: f45f25108cf8fe14c96584f18639683a,
+  coinStraight: {fileID: 4951272101996500, guid: f45f25108cf8fe14c96584f18639683a,
     type: 2}
-  coinJump: {fileID: 0}
+  coinStraight2: {fileID: 4767287821538276, guid: 0ad7da2e1d83a8b4fbc8b1beb5f97887,
+    type: 2}
+  coinJump: {fileID: 4767646889804430, guid: 8f55df3ca3b7ed944b735b1f8f0c0813, type: 2}
 --- !u!114 &114833844586094018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,5 +229,6 @@ MonoBehaviour:
     type: 2}
   pit: {fileID: 4666015002091938, guid: 82bf7d8d2fdb0954cb6927a8294cd388, type: 2}
   unjumpable: {fileID: 4816309790702396, guid: c98e8c98b16ce984da618f047c896f3d, type: 2}
-  slideUnder: {fileID: 0}
-  slideUnder2Lane: {fileID: 0}
+  slideUnder: {fileID: 4850406172373702, guid: 99f3b125f0464b04a928339bd0c019f4, type: 2}
+  slideUnder2Lane: {fileID: 4898065414864762, guid: cf70de234bca9e84692a3ad69464040b,
+    type: 2}

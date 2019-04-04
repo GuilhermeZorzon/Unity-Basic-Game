@@ -6,6 +6,7 @@ public class Coin_Loop : MonoBehaviour {
 
 	public Transform coin1;
 	public Transform coinStraight;
+	public Transform coinStraight2;
 	public Transform coinJump;
 
 	private int coinTell;
@@ -29,14 +30,18 @@ public class Coin_Loop : MonoBehaviour {
 				lane = Random.Range(-1, 2);
 			}
 		}
-		else if (coinTell == 4 || coinTell == 5) {
+		else if (coinTell == 4) {
 			coinUsed = coinStraight;
+			zUsed -= 1.65f; 
+		}
+		else if (coinTell == 5) {
+			coinUsed = coinStraight2; 
 		}
 
 			
 		objTransformSpecific = coinUsed.position;
 		
 			
-		Instantiate(coinUsed, new Vector3(2 * lane, objTransformSpecific.y, zUsed) ,coinUsed.rotation);
+		Instantiate(coinUsed, new Vector3(objTransformSpecific.x * lane, objTransformSpecific.y, zUsed) ,coinUsed.rotation);
 	}
 }
