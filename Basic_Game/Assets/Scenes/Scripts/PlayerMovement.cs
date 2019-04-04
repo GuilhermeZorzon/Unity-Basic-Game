@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
 	private float jumpForce = -10;  
     private bool isGrounded = true; 
 	private bool controllLocked = false;
+	private bool scaleLocked = false;
 
 	
 	// Update is called once per frame. FixedUpdate is because of Physics
@@ -45,12 +46,10 @@ public class PlayerMovement : MonoBehaviour {
 			FindObjectOfType<GameManager>().EndGame();
 		}
 
-		if(Input.GetKey(KeyCode.LeftShift)) {
+		if(Input.GetKeyDown(KeyCode.LeftShift)) {
 			plyTransform.localScale = new Vector3(1F, 0.5F, 1F);
-        }
-
-		if (Input.GetKeyUp(KeyCode.LeftShift)) {
-            plyTransform.localScale = new Vector3(1F, 1F, 1F);
+			scaleLocked = true;
+			StartCoroutine (stopScale());
         }
 
 
@@ -60,6 +59,12 @@ public class PlayerMovement : MonoBehaviour {
 		yield return new WaitForSeconds (0.5f);
 		sidewayForce = 0;
 		controllLocked = false;
+	}
+
+	IEnumerator stopScale () {
+		yield return new WaitForSeconds (0.5f);
+		plyTransform.localScale = new Vector3(1F, 1F, 1F);
+		scaleLocked = false;
 	}
 
 	IEnumerator stopJump () {
