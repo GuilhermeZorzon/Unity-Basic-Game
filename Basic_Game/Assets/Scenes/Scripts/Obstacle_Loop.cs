@@ -103,6 +103,9 @@ public class Obstacle_Loop : MonoBehaviour {
 			
 			FindObjectOfType<Coin_Loop>().Coin();
 		}
+
+		FindObjectOfType<PowerUp_Loop>().PowerUp();
+
 		zInterval = 0f;
 		zFirst = zFirst + 100f;
 

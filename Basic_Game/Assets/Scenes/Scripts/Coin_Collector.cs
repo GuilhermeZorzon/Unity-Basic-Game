@@ -11,10 +11,17 @@ public class Coin_Collector : MonoBehaviour {
 
 	void OnTriggerEnter (Collider collisioninfo) {
 		if (collisioninfo.gameObject.CompareTag("Coin")){
-			scr += 1;
+			if(PlayerPrefs.GetInt("dbCoins") == 1){
+				scr += 2;
+			}
+			else {
+				scr += 1;
+			}
 			score.text = (scr).ToString();
 			collisioninfo.gameObject.SetActive(false);
 			PlayerPrefs.SetString ("Score", score.text);
 		}
 	}
+
+	
 }

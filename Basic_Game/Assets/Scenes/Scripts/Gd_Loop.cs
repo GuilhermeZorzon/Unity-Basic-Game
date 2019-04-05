@@ -12,10 +12,6 @@ public class Gd_Loop : MonoBehaviour {
 	private float zGdPos = 145;
 	private int interval = 220;
 
-	/*void Start () {
-        InvokeRepeating("Gdr", 4f, 2f);
-	}*/
-
 	void Update () {
 	    if (Time.frameCount % interval == 0) {
 	        Instantiate(grd, new Vector3(0, 0, zGdPos) ,grd.rotation);
