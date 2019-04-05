@@ -228,6 +228,12 @@ Prefab:
       propertyPath: grd
       value: 
       objectReference: {fileID: 1932072234}
+    - target: {fileID: 114780539561951918, guid: 3bcadc080ad5cac42bdb1185dab78942,
+        type: 2}
+      propertyPath: coinJump
+      value: 
+      objectReference: {fileID: 4246188544913460, guid: 8f55df3ca3b7ed944b735b1f8f0c0813,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bcadc080ad5cac42bdb1185dab78942, type: 2}
   m_IsPrefabParent: 0
