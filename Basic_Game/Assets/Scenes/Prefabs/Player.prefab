@@ -31,6 +31,8 @@ GameObject:
   - component: {fileID: 114355859124513018}
   - component: {fileID: 114833844586094018}
   - component: {fileID: 114780539561951918}
+  - component: {fileID: 114524615714908538}
+  - component: {fileID: 114263126987114246}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -120,6 +122,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114263126987114246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991074552577282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968c0af0f9f0ee1459d54c5928cab0ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114355859124513018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,6 +187,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4524863483392102}
   score: {fileID: 0}
+--- !u!114 &114524615714908538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1991074552577282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27edd4dad1cf06e4dbf01e56d0d6cc16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PUpDouble: {fileID: 4329601872439686, guid: 6ea1986c5f7eb054c8ee9cd95691a1c3, type: 2}
+  PUpMagnet: {fileID: 4890815533119158, guid: 8a93d81c9b2489c42a8de1eb1e0c90f9, type: 2}
 --- !u!114 &114678381904744486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +238,7 @@ MonoBehaviour:
     type: 2}
   coinStraight2: {fileID: 4767287821538276, guid: 0ad7da2e1d83a8b4fbc8b1beb5f97887,
     type: 2}
-  coinJump: {fileID: 4767646889804430, guid: 8f55df3ca3b7ed944b735b1f8f0c0813, type: 2}
+  coinJump: {fileID: 4246188544913460, guid: 8f55df3ca3b7ed944b735b1f8f0c0813, type: 2}
 --- !u!114 &114833844586094018
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -21,20 +21,6 @@ public class Collision_script : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter (Collider colliderInfo) {
-
-		if (colliderInfo.gameObject.CompareTag("PowerUp")){
-			PlayerPrefs.SetInt("dbCoins", 1);
-			colliderInfo.gameObject.SetActive(false);
-			StartCoroutine (doubleCoins());
-		}
-
-	}
-
-	IEnumerator doubleCoins () {
-		yield return new WaitForSeconds (5f);
-		PlayerPrefs.SetInt("dbCoins", 0);
-	}
 
 	void Find () {
 		FindObjectOfType<GameManager>().EndGame();
