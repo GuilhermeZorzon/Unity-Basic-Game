@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23225118335306404}
   - component: {fileID: 136092352902580624}
   m_Layer: 0
-  m_Name: PowerUpDoubleCoins
+  m_Name: PowerUp
   m_TagString: PowerUpDoubleCoins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -3,6 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUp_Script : MonoBehaviour {
+
+	private float speed = 0.3f;
+	private bool magnetOn = false;
+
+	void Update () {
+		if(magnetOn == true) {
+			Collider[] hitColliders = Physics.OverlapSphere(gameObject.transform.position, 4f);
+ 
+      		for (int i = 0; i < hitColliders.Length; i++) {
+
+          		if (hitColliders[i].tag == "Coin") {
+            		Transform coin = hitColliders[i].transform;
+              		coin.position = Vector3.MoveTowards(coin.position, gameObject.transform.position, speed);
+		  		}
+			  
+			}
+		}
+	}
 	
 	
 	void OnTriggerEnter (Collider colliderInfo) {
@@ -14,8 +32,9 @@ public class PowerUp_Script : MonoBehaviour {
 		}
 
 		else if (colliderInfo.gameObject.CompareTag("PowerUpMagnet")){
-			Debug.Log("Getting those coins");
+			magnetOn = true;
 			colliderInfo.gameObject.SetActive(false);
+			StartCoroutine (magnetCoins());
 		}
 
 	}
@@ -23,5 +42,10 @@ public class PowerUp_Script : MonoBehaviour {
 	IEnumerator doubleCoins () {
 		yield return new WaitForSeconds (5f);
 		PlayerPrefs.SetInt("dbCoins", 0);
+	}
+
+	IEnumerator magnetCoins () {
+		yield return new WaitForSeconds (5f);
+		magnetOn = false;
 	}
 }
