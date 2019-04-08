@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
 	private float sidewayForce = 0;
 	private float jumpForce = -10;  
     private bool isGrounded = true; 
+	private bool inAir = false;
 	private bool controllLocked = false;
 	private bool scaleLocked = false;
 
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
             jumpForce = +5;
 			isGrounded = false;
+			inAir = true;
 			StartCoroutine (stopJump());
         }
 
@@ -51,6 +53,10 @@ public class PlayerMovement : MonoBehaviour {
 			scaleLocked = true;
 			StartCoroutine (stopScale());
         }
+
+		if (Input.GetKey("s") && inAir == true) {
+			jumpForce = -8f;
+		}
 
 
 	}
@@ -75,6 +81,7 @@ public class PlayerMovement : MonoBehaviour {
     void OnCollisionEnter(Collision collisioninfo) {
 		if(collisioninfo.gameObject.CompareTag("Ground")){
 			isGrounded = true;
+			inAir = false;
 		}
     }
   
