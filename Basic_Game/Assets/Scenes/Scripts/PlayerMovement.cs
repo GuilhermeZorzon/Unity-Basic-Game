@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 	private bool inAir = false;
 	private bool controllLocked = false;
 	private bool scaleLocked = false;
+	private bool gamePaused = false;
 
 	
 	// Update is called once per frame. FixedUpdate is because of Physics
@@ -56,6 +57,14 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (Input.GetKey("s") && inAir == true) {
 			jumpForce = -8f;
+		}
+
+		if(Input.GetKey("p") && gamePaused == false){
+			FindObjectOfType<Pause_Menu>().Pause();     
+		}
+		
+		if(Input.GetKey("p") && gamePaused == true){
+			FindObjectOfType<Pause_Menu>().Resume();     
 		}
 
 
